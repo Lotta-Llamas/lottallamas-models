@@ -1,0 +1,25 @@
+{
+  "name": "models",
+  "version": "1.0.0",
+  "description": "Model definitions for lottallamas",
+  "main": "index.js",
+  "dependencies": {
+    "pg": "^8.8.0",
+    "sequelize-cli": "^6.5.2",
+    "sequelize": "^6.26.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eats-alone/lottallamas-models.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eats-alone/lottallamas-models/issues"
+  },
+  "homepage": "https://github.com/eats-alone/lottallamas-models#readme"
+}
