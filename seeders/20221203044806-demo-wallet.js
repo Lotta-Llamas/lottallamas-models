@@ -5,27 +5,23 @@ const uuid = require('uuid');
 module.exports = {
 	async up (queryInterface, Sequelize) {
 		await queryInterface.bulkInsert('Wallets', [{
-			id: uuid.v4(),
+			id: '14GRxZmNCLHo5Uknr2XYnGA61Hh9uMULXV',
 			nickName: 'Bob',
-			address: '14GRxZmNCLHo5Uknr2XYnGA61Hh9uMULXV',
 			createdAt: new Date(),
 			updatedAt: new Date()
 		}, {
-			id: uuid.v4(),
+			id: '19h8nvZWqzpZnEufu611ZG6uZ5jYN1tytn',
 			nickName: 'Tom',
-			address: '19h8nvZWqzpZnEufu611ZG6uZ5jYN1tytn',
 			createdAt: new Date(),
 			updatedAt: new Date()
 		}, {
-			id: uuid.v4(),
+			id: '12YPS9sNbu2Umrmorgs18Bjb1J1webnwLk',
 			nickName: 'Larry',
-			address: '12YPS9sNbu2Umrmorgs18Bjb1J1webnwLk',
 			createdAt: new Date(),
 			updatedAt: new Date()
 		}, {
-			id: uuid.v4(),
+			id: '1LvdheuzDNJtDnNhmZLUKQ6wRum5zbyKHw',
 			nickName: 'Frank',
-			address: '1LvdheuzDNJtDnNhmZLUKQ6wRum5zbyKHw',
 			createdAt: new Date(),
 			updatedAt: new Date()
 		}], {});

@@ -12,7 +12,6 @@ module.exports = (sequelize, DataTypes) => {
 
 	Wallet.init({
 		nickName: DataTypes.STRING,
-		address: DataTypes.STRING
 	}, {
 		sequelize,
 		modelName: 'Wallet',

@@ -11,7 +11,6 @@ module.exports = (sequelize, DataTypes) => {
 
 	Content.init({
 		walletId: DataTypes.UUID,
-		creatorAddress: DataTypes.STRING,
 		token: DataTypes.STRING
 	}, {
 		sequelize,

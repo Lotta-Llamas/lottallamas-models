@@ -12,8 +12,7 @@ module.exports = (sequelize, DataTypes) => {
 
 	Post.init({
 		message: DataTypes.STRING,
-		creatorAddress: DataTypes.STRING,
-		walletId: DataTypes.UUID,
+		walletId: DataTypes.STRING,
 		contentId: DataTypes.UUID
 	}, {
 		sequelize,

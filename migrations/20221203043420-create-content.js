@@ -11,12 +11,8 @@ module.exports = {
 				allowNull: false,
 				primaryKey: true,
 			},
-			creatorAddress: {
-				type: Sequelize.STRING,
-				allowNull: false
-			},
 			walletId: {
-				type: Sequelize.UUID,
+				type: Sequelize.STRING,
 				allowNull: false,
 				references: {
 					model: 'Wallets',
