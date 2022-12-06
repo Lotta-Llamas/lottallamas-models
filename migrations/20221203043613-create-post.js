@@ -4,20 +4,31 @@ module.exports = {
 	async up(queryInterface, Sequelize) {
 		await queryInterface.createTable('Posts', {
 			id: {
-				type: Sequelize.INTEGER,
+				type: Sequelize.UUID,
 				allowNull: false,
-				autoIncrement: true,
 				primaryKey: true,
 			},
 			message: {
 				type: Sequelize.STRING,
 				allowNull: false,
 			},
+			creatorAddress: {
+				type: Sequelize.STRING,
+				allowNull: false
+			},
 			walletId: {
-				type: Sequelize.INTEGER,
+				type: Sequelize.UUID,
 				allowNull: false,
 				references: {
 					model: 'Wallets',
+					key: 'id',
+				},
+			},
+			contentId: {
+				type: Sequelize.UUID,
+				allowNull: false,
+				references: {
+					model: 'Content',
 					key: 'id',
 				},
 			},

@@ -4,9 +4,8 @@ module.exports = {
 	async up(queryInterface, Sequelize) {
 		await queryInterface.createTable('Comments', {
 			id: {
-				type: Sequelize.INTEGER,
+				type: Sequelize.UUID,
 				allowNull: false,
-				autoIncrement: true,
 				primaryKey: true
 			},
 			comment: {
@@ -14,7 +13,7 @@ module.exports = {
 				allowNull: false,
 			},
 			postId: {
-				type: Sequelize.INTEGER,
+				type: Sequelize.UUID,
 				allowNull: false,
 				references: {
 					model: 'Posts',

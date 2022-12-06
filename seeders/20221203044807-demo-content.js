@@ -1,30 +1,40 @@
 'use strict';
 
+const uuid = require('uuid');
+
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
 	async up (queryInterface, Sequelize) {
+		const wallets = await queryInterface.sequelize.query(
+			`SELECT id, address from "Wallets";`
+		);
+
 		await queryInterface.bulkInsert('Content', [{
+			id: uuid.v4(),
 			token: 'LLAMAS.test',
-			walletId: 1,
-			creatorAddress: '14GRxZmNCLHo5Uknr2XYnGA61Hh9uMULXV',
+			walletId: wallets[0][0].id,
+			creatorAddress: wallets[0][0].address,
 			createdAt: new Date(),
 			updatedAt: new Date()
 		}, {
+			id: uuid.v4(),
 			token: 'LLAMAS.test1',
-			walletId: 1,
-			creatorAddress: '14GRxZmNCLHo5Uknr2XYnGA61Hh9uMULXV',
+			walletId: wallets[0][0].id,
+			creatorAddress: wallets[0][0].address,
 			createdAt: new Date(),
 			updatedAt: new Date()
 		}, {
+			id: uuid.v4(),
 			token: 'LLAMAS.test2',
-			walletId: 2,
-			creatorAddress: '19h8nvZWqzpZnEufu611ZG6uZ5jYN1tytn',
+			walletId: wallets[0][1].id,
+			creatorAddress: wallets[0][1].address,
 			createdAt: new Date(),
 			updatedAt: new Date()
 		}, {
+			id: uuid.v4(),
 			token: 'LLAMAS.test3',
-			walletId: 2,
-			creatorAddress: '19h8nvZWqzpZnEufu611ZG6uZ5jYN1tytn',
+			walletId: wallets[0][1].id,
+			creatorAddress: wallets[0][1].address,
 			createdAt: new Date(),
 			updatedAt: new Date()
 		}], {});

@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
 	}
 
 	Content.init({
-		walletId: DataTypes.INTEGER,
+		walletId: DataTypes.UUID,
 		creatorAddress: DataTypes.STRING,
 		token: DataTypes.STRING
 	}, {
