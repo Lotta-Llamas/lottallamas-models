@@ -3,33 +3,34 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
 	async up (queryInterface, Sequelize) {
-		await queryInterface.bulkInsert('Posts', [{
-			message: 'Test 1',
+		await queryInterface.bulkInsert('Content', [{
+			token: 'LLAMAS.test',
 			walletId: 1,
-			contentId: 1,
+			creatorAddress: '14GRxZmNCLHo5Uknr2XYnGA61Hh9uMULXV',
 			createdAt: new Date(),
 			updatedAt: new Date()
 		}, {
-			message: 'Test 2',
+			token: 'LLAMAS.test1',
 			walletId: 1,
-			contentId: 1,
+			creatorAddress: '14GRxZmNCLHo5Uknr2XYnGA61Hh9uMULXV',
 			createdAt: new Date(),
 			updatedAt: new Date()
 		}, {
-			message: 'Test 3',
+			token: 'LLAMAS.test2',
 			walletId: 2,
-			contentId: 2,
+			creatorAddress: '19h8nvZWqzpZnEufu611ZG6uZ5jYN1tytn',
 			createdAt: new Date(),
 			updatedAt: new Date()
 		}, {
-			message: 'Test 4',
+			token: 'LLAMAS.test3',
 			walletId: 2,
-			contentId: 2,
+			creatorAddress: '19h8nvZWqzpZnEufu611ZG6uZ5jYN1tytn',
 			createdAt: new Date(),
 			updatedAt: new Date()
 		}], {});
 	},
+
 	async down (queryInterface, Sequelize) {
-		await queryInterface.bulkDelete('Posts', null, {});
+		await queryInterface.bulkDelete('Content', null, {});
 	}
 };

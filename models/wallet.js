@@ -5,6 +5,7 @@ module.exports = (sequelize, DataTypes) => {
 	class Wallet extends Model {
 		static associate(models) {
 			Wallet.hasMany(models.Post, { foreignKey: 'walletId' })
+			Wallet.hasMany(models.Content, { foreignKey: 'walletId' })
 		}
 	}
 
