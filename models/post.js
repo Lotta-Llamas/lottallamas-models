@@ -1,5 +1,6 @@
 'use strict';
 const { Model } = require('sequelize');
+const uuid = require('uuid');
 
 module.exports = (sequelize, DataTypes) => {
 	class Post extends Model {
@@ -18,6 +19,8 @@ module.exports = (sequelize, DataTypes) => {
 		sequelize,
 		modelName: 'Post',
 	});
+
+	Post.beforeCreate(post => post.id = uuid.v4());
 
 	return Post;
 };

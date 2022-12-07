@@ -15,5 +15,7 @@ module.exports = (sequelize, DataTypes) => {
 		modelName: 'Comment',
 	});
 
+	Comment.beforeCreate(comment => comment.id = uuid.v4());
+
 	return Comment;
 };
