@@ -1,5 +1,4 @@
 'use strict';
-const uuid = require('uuid');
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
@@ -7,7 +6,6 @@ module.exports = {
 		await queryInterface.createTable('Content', {
 			id: {
 				type: Sequelize.UUID,
-				defaultValue: () => uuid.v4(),
 				allowNull: false,
 				primaryKey: true,
 			},
@@ -18,6 +16,17 @@ module.exports = {
 					model: 'Wallets',
 					key: 'id',
 				},
+			},
+			title: {
+				type: Sequelize.STRING,
+				allowNull: false,
+			},
+			description: {
+				type: Sequelize.STRING,
+			},
+			isPublic: {
+				type: Sequelize.BOOLEAN,
+				defaultValue: false
 			},
 			token: {
 				type: Sequelize.STRING,
