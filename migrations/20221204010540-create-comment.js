@@ -21,6 +21,14 @@ module.exports = {
 					key: 'id',
 				},
 			},
+			walletId: {
+				type: Sequelize.STRING,
+				allowNull: false,
+				references: {
+					model: 'Wallets',
+					key: 'id',
+				},
+			},
 			createdAt: {
 				allowNull: false,
 				type: Sequelize.DATE

@@ -11,17 +11,8 @@ module.exports = {
 
 		await queryInterface.bulkInsert('Content', [{
 			id: uuid.v4(),
-			title: 'Content Test Title',
-			description: 'Content Description',
-			isPublic: false,
-			token: 'LLAMAS.test',
-			walletId: wallets[0][0].id,
-			createdAt: new Date(),
-			updatedAt: new Date()
-		}, {
-			id: uuid.v4(),
-			title: 'Content Test Title',
-			description: 'Content Description',
+			title: 'Content Test#1',
+			description: 'Content#1',
 			isPublic: false,
 			token: 'LLAMAS.test1',
 			walletId: wallets[0][0].id,
@@ -29,19 +20,28 @@ module.exports = {
 			updatedAt: new Date()
 		}, {
 			id: uuid.v4(),
-			title: 'Content Test Title',
-			description: 'Content Description',
+			title: 'Content Test#2',
+			description: 'Content#2',
 			isPublic: false,
-			token: 'LLAMAS.test4',
+			token: 'LLAMAS.test2',
+			walletId: wallets[0][0].id,
+			createdAt: new Date(),
+			updatedAt: new Date()
+		}, {
+			id: uuid.v4(),
+			title: 'Content Test#3',
+			description: 'Content#3',
+			isPublic: false,
+			token: 'LLAMAS.test3',
 			walletId: wallets[0][1].id,
 			createdAt: new Date(),
 			updatedAt: new Date()
 		}, {
 			id: uuid.v4(),
-			title: 'Content Test Title',
-			description: 'Content Description',
+			title: 'Content Test#4',
+			description: 'Content#4',
 			isPublic: false,
-			token: 'LLAMAS.test3',
+			token: 'LLAMAS.test4',
 			walletId: wallets[0][1].id,
 			createdAt: new Date(),
 			updatedAt: new Date()

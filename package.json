@@ -12,7 +12,8 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sync-db": "NODE_ENV='development' npx sequelize-cli db:migrate:undo:all && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all"
+    "sync-and-seed-development-db": "NODE_ENV='development' npx sequelize-cli db:migrate:undo:all && NODE_ENV='development' npx sequelize-cli db:migrate && NODE_ENV='development' npx sequelize-cli db:seed:all",
+	"sync-and-seed-test-db": "NODE_ENV='test' npx sequelize-cli db:migrate:undo:all && NODE_ENV='test' npx sequelize-cli db:migrate && NODE_ENV='test' npx sequelize-cli db:seed:all"
   },
   "repository": {
     "type": "git",
