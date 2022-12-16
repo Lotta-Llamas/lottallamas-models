@@ -10,18 +10,8 @@ module.exports = {
 			createdAt: new Date(),
 			updatedAt: new Date()
 		}, {
-			id: '19h8nvZWqzpZnEufu611ZG6uZ5jYN1tytn',
+			id: '1FBuCHMw5e5yTNKbf1eJq1bXZjoGaXeqwV',
 			nickName: 'Tom',
-			createdAt: new Date(),
-			updatedAt: new Date()
-		}, {
-			id: '12YPS9sNbu2Umrmorgs18Bjb1J1webnwLk',
-			nickName: 'Larry',
-			createdAt: new Date(),
-			updatedAt: new Date()
-		}, {
-			id: '1LvdheuzDNJtDnNhmZLUKQ6wRum5zbyKHw',
-			nickName: 'Frank',
 			createdAt: new Date(),
 			updatedAt: new Date()
 		}], {});

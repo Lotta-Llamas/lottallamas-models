@@ -13,8 +13,6 @@ module.exports = {
 			`SELECT id from "Wallets";`
 		);
 
-		console.log(wallets[0][0].id)
-
 		await queryInterface.bulkInsert('Comments', [{
 			id: uuid.v4(),
 			comment: 'Test Comment 1',
