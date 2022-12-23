@@ -1,6 +1,7 @@
 'use strict';
 
 const uuid = require('uuid');
+const { faker } = require('@faker-js/faker');
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
@@ -15,28 +16,28 @@ module.exports = {
 
 		await queryInterface.bulkInsert('Comments', [{
 			id: uuid.v4(),
-			comment: 'Test Comment 1',
+			comment: faker.lorem.paragraph(),
 			postId: posts[0][0].id,
 			walletId: wallets[0][0].id,
 			createdAt: new Date(),
 			updatedAt: new Date()
 		}, {
 			id: uuid.v4(),
-			comment: 'Test Comment 2',
+			comment: faker.lorem.paragraph(),
 			postId: posts[0][0].id,
 			walletId: wallets[0][0].id,
 			createdAt: new Date(),
 			updatedAt: new Date()
 		}, {
 			id: uuid.v4(),
-			comment: 'Test Comment 3',
+			comment: faker.lorem.paragraph(),
 			postId: posts[0][1].id,
 			walletId: wallets[0][1].id,
 			createdAt: new Date(),
 			updatedAt: new Date()
 		}, {
 			id: uuid.v4(),
-			comment: 'Test Comment 4',
+			comment: faker.lorem.paragraph(),
 			postId: posts[0][1].id,
 			walletId: wallets[0][1].id,
 			createdAt: new Date(),
