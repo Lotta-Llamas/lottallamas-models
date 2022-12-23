@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
 	class Content extends Model {
 		static associate(models) {
 			Content.belongsTo(models.Wallet, { foreignKey: 'walletId' });
-			Content.hasMany(models.Post, { foreignKey: 'contentId' })
+			Content.hasMany(models.Post, { foreignKey: 'contentId', as: 'posts' })
 		}
 	}
 

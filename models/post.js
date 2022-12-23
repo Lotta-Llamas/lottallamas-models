@@ -7,12 +7,13 @@ module.exports = (sequelize, DataTypes) => {
 		static associate(models) {
 			Post.belongsTo(models.Wallet, { foreignKey: 'walletId' });
 			Post.belongsTo(models.Content, { foreignKey: 'contentId' })
-			Post.hasMany(models.Comment, { foreignKey: 'postId' })
+			Post.hasMany(models.Comment, { foreignKey: 'postId', as: 'comments' })
 		}
 	}
 
 	Post.init({
-		message: DataTypes.STRING,
+		title: DataTypes.STRING,
+		text: DataTypes.TEXT,
 		walletId: DataTypes.STRING,
 		contentId: DataTypes.UUID
 	}, {
