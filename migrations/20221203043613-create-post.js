@@ -9,8 +9,12 @@ module.exports = {
 				allowNull: false,
 				primaryKey: true,
 			},
-			message: {
+			title: {
 				type: Sequelize.STRING,
+				allowNull: false,
+			},
+			text: {
+				type: Sequelize.TEXT,
 				allowNull: false,
 			},
 			walletId: {
