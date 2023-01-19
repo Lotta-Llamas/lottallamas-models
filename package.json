@@ -1,5 +1,5 @@
 {
-  "name": "models",
+  "name": "@devups/lottallamas-models",
   "version": "1.0.0",
   "description": "Model definitions for lottallamas",
   "main": "index.js",
