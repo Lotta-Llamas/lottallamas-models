@@ -15,7 +15,8 @@ module.exports = (sequelize, DataTypes) => {
 		title: DataTypes.STRING,
 		text: DataTypes.TEXT,
 		walletId: DataTypes.STRING,
-		contentId: DataTypes.UUID
+		contentId: DataTypes.UUID,
+		isDeleted: DataTypes.BOOLEAN,
 	}, {
 		sequelize,
 		modelName: 'Post',
