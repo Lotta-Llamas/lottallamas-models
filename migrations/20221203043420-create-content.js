@@ -1,21 +1,14 @@
 'use strict';
+
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
 	async up(queryInterface, Sequelize) {
-		await queryInterface.createTable('Posts', {
+		await queryInterface.createTable('Content', {
 			id: {
 				type: Sequelize.UUID,
 				defaultValue: Sequelize.UUIDV4,
 				allowNull: false,
 				primaryKey: true,
-			},
-			title: {
-				type: Sequelize.STRING,
-				allowNull: false,
-			},
-			text: {
-				type: Sequelize.TEXT,
-				allowNull: false,
 			},
 			walletId: {
 				type: Sequelize.STRING,
@@ -25,13 +18,21 @@ module.exports = {
 					key: 'id',
 				},
 			},
-			contentId: {
-				type: Sequelize.UUID,
+			title: {
+				type: Sequelize.STRING,
 				allowNull: false,
-				references: {
-					model: 'Content',
-					key: 'id',
-				},
+			},
+			description: {
+				type: Sequelize.STRING,
+			},
+			isPublic: {
+				type: Sequelize.BOOLEAN,
+				defaultValue: false
+			},
+			token: {
+				type: Sequelize.STRING,
+				allowNull: false,
+				unique: true
 			},
 			createdAt: {
 				type: Sequelize.DATE,
@@ -44,6 +45,6 @@ module.exports = {
 		});
 	},
 	async down(queryInterface, Sequelize) {
-		await queryInterface.dropTable('Posts');
+		await queryInterface.dropTable('Content');
 	}
 };
