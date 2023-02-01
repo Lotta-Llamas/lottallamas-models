@@ -1,6 +1,6 @@
 {
   "name": "@lotta-llamas/models",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Model definitions for lottallamas",
   "main": "index.js",
   "dependencies": {
