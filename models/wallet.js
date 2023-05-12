@@ -8,6 +8,7 @@ module.exports = (sequelize, DataTypes) => {
 			Wallet.hasMany(models.Post, { foreignKey: 'walletId' })
 			Wallet.hasMany(models.Content, { foreignKey: 'walletId' })
 			Wallet.hasMany(models.Comment, { foreignKey: 'walletId' })
+			Wallet.hasMany(models.Media, { foreignKey: 'walletId' })
 		}
 	}
 
