@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
 
 	Comment.init({
 		comment: DataTypes.TEXT,
-		walletId: DataTypes.UUID,
+		walletId: DataTypes.STRING,
 		isDeleted: DataTypes.BOOLEAN,
 	}, {
 		sequelize,

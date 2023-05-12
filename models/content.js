@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
 	}
 
 	Content.init({
-		walletId: DataTypes.UUID,
+		walletId: DataTypes.STRING,
 		title: DataTypes.STRING,
 		description: DataTypes.STRING,
 		isPublic: DataTypes.BOOLEAN,
